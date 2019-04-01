@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="teste.wf.apptest">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="@xml/backup_descriptor">
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ConsultarOficina"
+            android:parentActivityName=".MainActivity"
+            android:label="Consultar Oficinas"/>
+
+        <activity
+            android:name=".IndicarAmigo"
+            android:parentActivityName=".MainActivity"
+            android:label="Indicar Amigos"/>
+
+        <activity
+            android:name=".DetalhesOficina"
+            android:parentActivityName=".ConsultarOficina"
+            android:label="Detalhes Oficina"/>
+    </application>
+
+</manifest>
